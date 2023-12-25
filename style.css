@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(47, 46, 46);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fullpage {
+    width:min(90%, 1000px);
+    height: min(90%, 1000px);
+    background-color: rgb(47, 46, 46);
+    border-radius: 20px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 1px 1px 4px rgb(0, 0, 0);
+}
+
+.cont {
+    background-color: transparent;
+    width: 95%;
+    margin-inline: auto;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.grow {
+    position: absolute;
+    z-index: 999;
+    font-size: 50px;
+    text-align: center;
+    font-family: roboto;
+    font-weight: bolder;
+    color: white;
+    animation: up 10s linear forwards;
+    margin-top: -300px;
+    text-shadow: 1px 1px 4px rgb(10, 10, 10);
+}
+
+.btn {
+    position: absolute;
+    margin-top: 200px;
+
+}
+
+.btn a {
+    width: 100px;
+    height: 30px;
+    font-family: 'Orbitron';
+    border-radius: 5px;
+    margin-left: 5px;;
+    color: white;
+    cursor: pointer;
+    transition: ease-in;
+    background-color: transparent;
+    border: 0;
+    text-decoration: none;
+}
+.btn button:hover {
+    background-color: transparent;
+    border: 1px solid rgb(68, 94, 104);
+}
+.logo {
+    font-family: roboto, sans-serif;
+    background-color: rgb(0, 183, 255);
+    height: 80px;
+    width: 80px;
+    border-top-right-radius: 20%;
+    border-top-left-radius: 20%;
+    border-bottom-left-radius: 20%;
+    border-bottom-right-radius: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-right: 20px;
+    box-shadow: 1px 1px 4px rgb(29, 29, 29);
+    animation: min 4s linear;
+    z-index: 2;
+}
+
+@keyframes min {
+    0% {
+        transform: scale(200) rotate(360deg);
+    }
+    25% {
+        transform: scale(150) rotate(180deg);
+    }
+    50% {
+        transform: scale(100) rotate(90deg);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(0);
+    }
+}
+
+.logo h1 {
+    font-size: 60px;
+    transform: skewX(2%);
+    color: white;
+    text-shadow: 1px 1px 4px black;
+}
+.cont .name {
+    display: flex;
+    align-items: center;
+    font-family: roboto;
+    font-size: 40px;
+    font-weight: lighter;
+    animation: pullOut 10s linear;
+    color: white !important;
+    /* animation-delay: 3s; */
+}
+@keyframes pullOut {
+    0% {
+        opacity: 0;
+        margin-left: -200px;
+    }
+    50% {
+        opacity: 0;
+        margin-left: -100px;
+    }
+    100% {
+        margin-left: 0px;
+    }
+}
+.cont .name p:first-child {
+    font-weight: bolder;
+}
